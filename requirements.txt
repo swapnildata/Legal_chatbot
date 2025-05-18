@@ -1,0 +1,8 @@
+langchain
+langchain-community
+google-generativeai
+streamlit
+langchain-google-genai
+langgraph
+pyyaml
+altair==4.2.2

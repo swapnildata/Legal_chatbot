@@ -56,7 +56,7 @@ State Definition (LegalBotState):
 ### 4.Chat Logging
 All the conversation is being logged in artifacts folder in json format. For each day a new file will be created with its date. As soon as user press the end session button, all the summary, input, response, category, timestamp will get stored in the file.
 
-Flow Summary:
+### 5.Flow Summary:
 1. User submits a query via Streamlit UI.
 2. Query is added to LangChain memory.
 3. Messages are passed into the LangGraph pipeline.

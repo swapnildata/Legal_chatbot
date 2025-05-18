@@ -42,15 +42,16 @@ With usage of ChatGoogleGenerativeAI from langchain LLM is configured through pa
 
 ### 3.Langgraph Workflow:
 A langgraph consists of following nodes:
-Classify: Classifies user issue into legal categories.
-Guide: Generates a legal response based on classification and query.
-End: Terminates the graph.
+
+1. Classify: Classifies user issue into legal categories.
+2. Guide: Generates a legal response based on classification and query.
+3. End: Terminates the graph.
 
 State Definition (LegalBotState):
-messages: Full list of user + AI messages.
-category: Legal classification result.
-response: Final legal advice generated.
-timestamp: Datetime when the query was processed.
+1. messages: Full list of user + AI messages.
+2. category: Legal classification result.
+3. response: Final legal advice generated.
+4. timestamp: Datetime when the query was processed.
 
 ### 4.Chat Logging
 All the conversation is being logged in artifacts folder in json format. For each day a new file will be created with its date. As soon as user press the end session button, all the summary, input, response, category, timestamp will get stored in the file.

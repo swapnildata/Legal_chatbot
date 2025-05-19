@@ -80,3 +80,11 @@ All the conversation is being logged in artifacts folder in json format. For eac
     }
 ]
 
+##  Docker Execution
+
+### 1.For pulling the image run the below command:
+docker pull swapnilpowar/legal-chatbot:latest
+
+### 2.To run the container use below command:
+docker run -p 8501:8501 swapnilpowar/legal-chatbot:latest
+

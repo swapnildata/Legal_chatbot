@@ -1,7 +1,6 @@
 import streamlit as st
 from langchain_core.messages import HumanMessage
-from Langchain_Integrity import saveLogs, loadCategories, memory, generateSummary, llm
-from Langgraph_Integrity import  LegalChatbot
+from Langchain_Integrity import saveLogs, loadCategories, memory, generateSummary, llm, LegalChatbot
 
 LEGAL_CATEGORIES = loadCategories()
 chatbot = LegalChatbot(llm, legal_categories=LEGAL_CATEGORIES)

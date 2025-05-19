@@ -1,6 +1,6 @@
 # Introduction
 This is legal advisor chatboat which gives the legal advice based upon input prompt.
-It is build on top of langchain, laggraph, streamlit and geminis "models/gemma-3-12b-it" model.
+It is build on top of langchain, laggraph, streamlit and geminis "gemini-1.5-flash" model.
 
 # Features
 - Classifies legal issues (e.g., Property, Family, Contract, etc.)

@@ -1,13 +1,13 @@
-# Intro
+# Introduction
 This is legal advisor chatboat which gives the legal advice based upon input prompt.
-It is built on top of langchain, laggraph, streamlit and geminis "models/gemma-3-12b-it" model.
+It is build on top of langchain, laggraph, streamlit and geminis "models/gemma-3-12b-it" model.
 
 # Features
 - Classifies legal issues (e.g., Property, Family, Contract, etc.)
 - Provides short, guided legal suggestions.
 - Saves full session logs in JSON format.
 
-## 📁 Project Setup and Structure
+##  Project Setup and Structure
 
 ### Step 1: Cloning the repository
 git clone https://github.com/swapnildata/Legal_chatbot.git
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Step 6: Running the app.
 python app.py
 
-## 📁 Architecture and Components
+##  Architecture and Components
 This project is a legal chatbot built using LangChain, LangGraph, Gemini Pro, and Streamlit, designed to classify user legal queries, provide legal advice, and track conversation summaries. 
 
 ### 1.Frontend:
@@ -62,4 +62,21 @@ All the conversation is being logged in artifacts folder in json format. For eac
 3. Messages are passed into the LangGraph pipeline.
 4. Issue is classified and a response is generated.
 5. Response is stored, displayed, and can be summarized upon session end.
+
+##  Testing Example for reference:
+[
+    {
+        "user_name": "swapnil",
+        "datetime": "2025-05-19 00:26:46.933793",
+        "messages": [
+            {
+                "user_input": "Someone stollen my wallet during travel in metro.",
+                "response": "Okay, here's some legal advice regarding your stolen wallet, focusing on immediate steps and potential actions:\n\n1. **File a Police Report Immediately:** This is crucial for insurance claims and potential investigation.  Most metro systems have police presence or designated reporting areas.\n2. **Cancel Credit/Debit Cards:** Contact your banks immediately to prevent fraudulent charges. Keep records of cancellation confirmations.\n3. **Replace Identification:**  Report lost IDs (driver's license, passport) and begin the replacement process.\n4. **Consider Travel Insurance:** If you have travel insurance, review your policy for theft coverage.\n5. **Relevant Links:**  [India's National Cyber Crime Reporting Portal](https://cybercrime.gov.in/) (for reporting) & your local police department's website for reporting procedures.\n\n\n\n**Disclaimer:** *I am an AI chatbot and cannot provide legal advice. This information is for general guidance only. Consult with a lawyer for advice specific to your situation.*",
+                "category": "Criminal",
+                "timestamp": "2025-05-19 00:26:29.866446"
+            }
+        ],
+        "summary": "Here's a summary of the chatbot conversation:\n\nThe user reported their wallet was stolen during metro travel, expressing concern about financial loss and identity theft. The conversation falls under **theft/larceny** and potentially **identity theft** legal categories. The chatbot advised the user to prioritize immediate actions: filing a police report, canceling credit/debit cards, and replacing lost identification. It also suggested reviewing travel insurance policies for coverage.  The bot provided links to the National Cyber Crime Reporting Portal and the local police department. Crucially, the chatbot emphasized it's providing general guidance and not legal advice, urging consultation with a lawyer."
+    }
+]
 

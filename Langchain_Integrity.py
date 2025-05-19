@@ -24,7 +24,7 @@ api_key = os.getenv("Gemini_API_key")
 llm = ChatGoogleGenerativeAI(model=MODEL, temperature=TEMPERATURE,google_api_key=api_key)
 memory = ConversationBufferMemory (llm=llm,memory_key="history",return_messages=True)
 
-def load_categories():
+def loadCategories():
     config_path = Path("config/params.yaml")
     with open(config_path, "r") as f:
         params = yaml.safe_load(f)
@@ -34,7 +34,7 @@ def load_categories():
     return categories_list
 
 
-def save_full_session_log(user_name: str, messages: list, summary: str):
+def saveLogs(user_name: str, messages: list, summary: str):
     artifacts_dir = "artifacts"
     os.makedirs(artifacts_dir, exist_ok=True)
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -50,7 +50,7 @@ def save_full_session_log(user_name: str, messages: list, summary: str):
         json.dump(all_sessions, file, indent=4)
 
 
-def generate_conversation_summary():
+def generateSummary():
     full_chat = memory.chat_memory.messages
     conversation_text = ""
     for msg in full_chat:
